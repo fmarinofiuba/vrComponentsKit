@@ -1,1 +1,1 @@
-# vrStarterKit
+# vrComponents
