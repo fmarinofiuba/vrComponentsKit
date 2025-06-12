@@ -7,6 +7,8 @@
     "vite-plugin-glsl": "^1.4.1"
   },
   "devDependencies": {
-    "vite": "^5.3.3"
+    "vite": "^5.3.3",
+    "vite-plugin-html": "^3.2.2",
+    "vite-plugin-multi-pages": "^0.0.14"
   }
 }
