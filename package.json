@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "dat.gui": "^0.7.9",
+    "three": "^0.169.0",
+    "three-mesh-bvh": "^0.7.6",
+    "uil": "^4.3.0",
+    "vite-plugin-glsl": "^1.4.1"
+  },
+  "devDependencies": {
+    "vite": "^5.3.3"
+  }
+}
