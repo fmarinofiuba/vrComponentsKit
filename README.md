@@ -1,4 +1,4 @@
-# VR Components Kit
+# Kit de Componentes VR
 
 Este proyecto propone un conjunto de componentes de software de alto nivel para facilitar la creación de experiencias inmersivas.
 
