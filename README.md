@@ -1,1 +1,1 @@
-# webxrTemplates
+# VR Components Kit
