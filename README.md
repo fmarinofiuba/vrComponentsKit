@@ -9,3 +9,5 @@ Además, se proporcionan ejemplos didácticos para evaluar funcionalmente los m�
 
 ## Demo
 [Ver demo aquí](https://fmarinofiuba.github.io/vrComponentsKit/)
+
+Autor: Federico Marino - fmarino@fi.uba.ar
