@@ -134,7 +134,7 @@ function setupXR() {
 
 function buildScene() {
 	// floor
-	let floorTexture = new THREE.TextureLoader().load('maps/floorPlane.png');
+	let floorTexture = new THREE.TextureLoader().load('../maps/floorPlane.png');
 
 	floor = new THREE.Mesh(
 		new THREE.PlaneGeometry(300, 300, 20, 20).rotateX(-Math.PI / 2),

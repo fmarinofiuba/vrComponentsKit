@@ -37,7 +37,7 @@ export class VrMenu extends VrInteractivePanel {
 			this._container.position.set(0, 0.5, -1);
 			this._container.scale.set(1, 1, 1);
 		}
-
+		this._container.visible = false; // initially hidden
 		this._setupEventListeners();
 	}
 

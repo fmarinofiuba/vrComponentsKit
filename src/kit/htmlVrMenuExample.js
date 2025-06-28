@@ -88,7 +88,16 @@ function setupXR() {
 
 	//xrTeleportMoveControl = new XRTeleportMoveControl(renderer.xr, controllersManager, scene);
 	//xrTeleportMoveControl.setTeleportSurfaces(floor.geometry);
-	vrMenu = new HtmlVrMenu(scene, controllersManager, { mode: 'panel', debugLevel: 1 });
+	vrMenu = new HtmlVrMenu(scene, controllersManager, {
+		 mode: 'swatch',		
+		debugLevel: 1,
+		panel: {
+			width: 1, // meters
+			inclination: 30, // degrees
+			distance: 1.25, // meters
+			verticalOffset: -0.5, // meters
+		}} 
+	);
 }
 
 function onWindowResize() {
@@ -105,7 +114,6 @@ function buildUI() {
 	let gui = vrMenu.ui;
 
 	gui.add(params, 'torusSpeed', 0, 10);
-
 	gui.add(params, 'torusScale', 0.5, 2);
 
 	gui.add(params, 'cubeSpeed', 0, 10);
@@ -135,6 +143,8 @@ function render(time) {
 		sceneElements.torus.rotation.y += params.torusSpeed / 100;
 		sceneElements.cube.rotation.y -= params.cubeSpeed / 100;
 		sceneElements.pointLight.color.setHSL(params.lightHUE, 1, 0.5);
+		sceneElements.torus.scale.setScalar(params.torusScale);
+		sceneElements.cube.scale.setScalar(params.cubeScale);
 	}
 }
 

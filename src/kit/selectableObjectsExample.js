@@ -255,6 +255,7 @@ function onSelected(e) {
 function updatePodiumObject() {
 	if (podiumObject) scene.remove(podiumObject);
 	podiumObject = new THREE.Mesh(geometries[currentGeometryIndex], materials[currentMaterialIndex].clone());
+	podiumObject.material.emissive.setHex(0x000000);
 	podiumObject.position.set(0, 1, -2);
 	podiumObject.scale.set(2, 2, 2);
 	scene.add(podiumObject);

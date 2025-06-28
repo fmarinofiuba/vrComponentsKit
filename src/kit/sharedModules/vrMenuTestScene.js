@@ -76,5 +76,6 @@ export const createVRMenuTestScene = (scene) => {
 		torus: torusKnot,
 		cube: cube,
 		pointLight: pointLight,
+		floor: floor,
 	};
 };

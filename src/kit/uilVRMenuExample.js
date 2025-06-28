@@ -84,9 +84,18 @@ function setupXR() {
 		}
 	});
 
-	//xrTeleportMoveControl = new XRTeleportMoveControl(renderer.xr, controllersManager, scene);
-	//xrTeleportMoveControl.setTeleportSurfaces(floor.geometry);
-	vrMenu = new UILVrMenu(scene, controllersManager, { mode: 'panel', debugLevel: 1 });
+	xrTeleportMoveControl = new XRTeleportMoveControl(renderer.xr, controllersManager, scene);
+	xrTeleportMoveControl.setTeleportSurfaces(sceneElements.floor.geometry);
+	vrMenu = new UILVrMenu(scene, controllersManager, {
+		mode: 'panel',
+		debugLevel: 1,
+		panel: {
+			width: 1, // meters
+			inclination: 30, // degrees
+			distance: 1.25, // meters
+			verticalOffset: -0.5, // meters
+		},
+	});
 }
 
 function onWindowResize() {
@@ -97,6 +106,7 @@ function onWindowResize() {
 
 function buildScene() {
 	sceneElements = createVRMenuTestScene(scene);
+	
 }
 
 function buildUI() {
@@ -121,7 +131,7 @@ function render(time) {
 	const delta = clock.getDelta();
 
 	controllersManager.update(time, delta);
-	//xrTeleportMoveControl.update(delta);
+	xrTeleportMoveControl.update(delta);
 
 	renderer.render(scene, camera);
 
