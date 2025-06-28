@@ -1,0 +1,2 @@
+import{m as D}from"./ControllersManager.js";import{b as f,F as x,l as p,M as z}from"./VRButton.js";function A(a=10){const c=new f({color:10057540,side:x,shininess:32}),h=new p(.6,.1,3),l=new p(3,.2,3*2+1+.5*2);let t=[],e=.1;for(let s=0;s<a;s++){const o=s%2===0?1:-1;for(let r=0;r<=10;r++){const S=(-5+r)*.6*o,u=(3/2+.5)*o,y=e;let i=h.clone();i.translate(S,y,u),t.push(i),e=e+.3}let n=l.clone();const d=(10/2*.6+2.5)*o,g=0,G=e;n.translate(d,G,g),t.push(n)}let m=D(t);return new z(m,c)}export{A as g};
+//# sourceMappingURL=squareStaircase.js.map
